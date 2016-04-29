@@ -185,6 +185,11 @@ QString Group::defaultAutoTypeSequence() const
     return m_data.defaultAutoTypeSequence;
 }
 
+QString Group::defaultAutoTypeRegex() const
+{
+    return m_data.defaultAutoTypeRegex;
+}
+
 Group::TriState Group::autoTypeEnabled() const
 {
     return m_data.autoTypeEnabled;
@@ -267,6 +272,11 @@ void Group::setExpanded(bool expanded)
 void Group::setDefaultAutoTypeSequence(const QString& sequence)
 {
     set(m_data.defaultAutoTypeSequence, sequence);
+}
+
+void Group::setDefaultAutoTypeRegex(const QString& regex)
+{
+    set(m_data.defaultAutoTypeRegex, regex);
 }
 
 void Group::setAutoTypeEnabled(TriState enable)

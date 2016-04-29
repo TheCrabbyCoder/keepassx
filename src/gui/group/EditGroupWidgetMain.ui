@@ -114,6 +114,17 @@
        </item>
       </layout>
      </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="autotypeRegexLabel">
+       <property name="text">
+        <string>Auto-type RegEx</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="autoTypeRegexEdit">
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>

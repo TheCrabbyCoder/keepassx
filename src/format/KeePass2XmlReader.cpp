@@ -547,6 +547,9 @@ Group* KeePass2XmlReader::parseGroup()
         else if (m_xml.name() == "DefaultAutoTypeSequence") {
             group->setDefaultAutoTypeSequence(readString());
         }
+        else if (m_xml.name() == "DefaultAutoTypeRegex") {
+            group->setDefaultAutoTypeRegex(readString());
+        }
         else if (m_xml.name() == "EnableAutoType") {
             QString str = readString();
 

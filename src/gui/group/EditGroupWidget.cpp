@@ -83,6 +83,7 @@ void EditGroupWidget::loadGroup(Group* group, bool create, Database* database)
         m_mainUi->autoTypeSequenceCustomRadio->setChecked(true);
     }
     m_mainUi->autoTypeSequenceCustomEdit->setText(group->defaultAutoTypeSequence());
+    m_mainUi->autoTypeRegexEdit->setText(group->defaultAutoTypeRegex());
 
     IconStruct iconStruct;
     iconStruct.uuid = group->iconUuid();
@@ -112,6 +113,7 @@ void EditGroupWidget::save()
     else {
         m_group->setDefaultAutoTypeSequence(m_mainUi->autoTypeSequenceCustomEdit->text());
     }
+    m_group->setDefaultAutoTypeRegex(m_mainUi->autoTypeRegexEdit->text());
 
     IconStruct iconStruct = m_editGroupWidgetIcons->save();
 

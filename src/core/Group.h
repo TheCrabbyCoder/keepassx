@@ -44,6 +44,7 @@ public:
         TimeInfo timeInfo;
         bool isExpanded;
         QString defaultAutoTypeSequence;
+        QString defaultAutoTypeRegex;
         Group::TriState autoTypeEnabled;
         Group::TriState searchingEnabled;
     };
@@ -64,6 +65,7 @@ public:
     TimeInfo timeInfo() const;
     bool isExpanded() const;
     QString defaultAutoTypeSequence() const;
+    QString defaultAutoTypeRegex() const;
     Group::TriState autoTypeEnabled() const;
     Group::TriState searchingEnabled() const;
     bool resolveSearchingEnabled() const;
@@ -82,6 +84,7 @@ public:
     void setTimeInfo(const TimeInfo& timeInfo);
     void setExpanded(bool expanded);
     void setDefaultAutoTypeSequence(const QString& sequence);
+    void setDefaultAutoTypeRegex(const QString& regex);
     void setAutoTypeEnabled(TriState enable);
     void setSearchingEnabled(TriState enable);
     void setLastTopVisibleEntry(Entry* entry);

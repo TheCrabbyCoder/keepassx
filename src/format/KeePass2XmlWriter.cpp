@@ -266,6 +266,7 @@ void KeePass2XmlWriter::writeGroup(const Group* group)
     writeTimes(group->timeInfo());
     writeBool("IsExpanded", group->isExpanded());
     writeString("DefaultAutoTypeSequence", group->defaultAutoTypeSequence());
+    writeString("DefaultAutoTypeRegex", group->defaultAutoTypeRegex());
 
     writeTriState("EnableAutoType", group->autoTypeEnabled());
 
